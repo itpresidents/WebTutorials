@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<!--charset attribute specifies the character encoding for the HTML document -->
+<meta charset="UTF-8">
+<!--the title tag is required. The title shows up in the browser toolbar, search engine results, and bookmarks -->
+<title>Sample HTML Page</title>
+<!--These are optional tags for metadata. They help with SEO etc-->
+<meta name="description" content="this is a sample description">
+<meta name="keywords" content="HTML,CSS,tutorial">
+<meta name="author" content="your name">
+
+<!--If we have external CSS or JavaScript files we link to them here in the head 
+THIS WILL BE COVERED IN FUTURE TUTORIALS ON CSS and JAVASCRIPT
+
+<link href="style.css" rel="stylesheet" type="text/css" media="screen">
+<script src="sketch.js" type="text/javascript"></script
+
+
+-->
+
+<!--If we want to add some custom styles for this page only, we can use the style tag
+THIS WILL BE COVERED IN FUTURE TUTORIALS ON CSS
+
+<style>
+
+	p {
+    	color:#FF0000;
+    }
+    
+    .thumb{
+    	width:100px;
+        height:100px;
+        float:left;
+    }
+    
+    #wrapper{
+    	width:960px;
+        height:auto;
+        margin:0 auto;
+    }
+    
+</style>
+ -->
+
+</head>
+
+<body>
+<p><em>This is a page with some basic HTML elements. We will update and add to this example as the tutorials progress.</em></p>
+<hr id="top"><!--this horizontal rule (line) has an ID attached to it. Anchor tags can link to this part of the page.-->
+<!--Header Tags: <h1> defines the most important heading. <h6> defines the least important heading.-->
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+
+<hr>
+
+<p>This is a paragraph...</p>
+<p>This is another paragraph.<strong> This sentence is bold because it is wrapped with a strong tag.</strong> <em>This sentence is italic becuase it is wrapped with the em tag.</em></p>
+<p>This is a third paragraph<br>with<br>line<br>breaks.
+</p>
+<p>This paragraph has <small>some text wrapped in the small tag.</small></p>
+
+<hr>
+<p>This is an unordered list.</p>
+<ul>
+	<li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul>
+
+<p>This is an ordered list.</p>
+<ol>
+	<li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ol>
+
+<hr>
+<!--Title and Alternative text help with SEO and Accessibility, for example, if someone has a screen reader, it will read the alternative text so the user knows what the image is of-->
+<p>Here is a sample image tag. Please view source to see its alternative text, title, and attributes and how they are added!</p>
+<img src="http://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg" title="Goats Rock!" alt="goat on a stump" width="360" height="360" >
+
+<hr>
+
+<!--Anchor tags -->
+<!--target="_blank will open a link in a new tab/window"-->
+<a href="http://itp.nyu.edu/residents/" target="_blank">This is an anchor tag that links to the residents blog in a new window.</a><br>
+<!--target="_blank will open a link inthe same tab/window"-->
+<a href="http://itp.nyu.edu/residents/" target="_self">This is an anchor tag that links to the residents blog in the same window.</a><br>
+<p>This is a paragraph with a link in it. When in doubt, check out the <a href="http://itp.nyu.edu/residents/" target="_blank">residents blog</a></p>
+<a href="#top">this anchor tag links to the top of the page by linking to an element's id</a>
+
+<hr>
+
+<!--The form action usually contains a file to process the form data. 
+for example createuser.php or upload.asp
+In this example we just have a dummy link.
+-->
+<p>Here is a form containing basic input types. For more information see <a href="http://www.w3schools.com/html/html_forms.asp">W3 Schools</a></p>
+<form action="#" method="post" name="sampleForm" target="_self">
+<p>The box and title below are created by using the feildset and legend tags.</p>
+<fieldset>
+<legend>Simple Text Input</legend>
+<p>This is your most basic text input</p>
+<label for="FirstName">First Name: </label>
+<input name="FirstName" type="text">
+<p>This text input has a max character length and placeholder text set.</p>
+<label for="LastName">Last Name: </label>
+<input name="LastName" type="text"  placeholder="Last Name" maxlength="15">
+</fieldset>
+<fieldset>
+<legend>Text Area</legend>
+<p>Text areas are good for longer text, like sentences or paragraphs. They can be sized with rows and cols. </p>
+<label for="WhyITP">Why did you apply to ITP?</label><br>
+<textarea name="WhyITP" cols="50" rows="10">
+</textarea>
+</fieldset>
+<fieldset>
+<legend>Check Boxes</legend>
+<p>Check boxes allow the user to select more than one option at once. Checkboxes in the same group have the same name, but different values!</p>
+<label for="Pet">What pets do you have?</label><br>
+	<input type="checkbox" name="Pet" value="Dog">Dog<br>
+	<input type="checkbox" name="Pet" value="Cat">Cat<br>
+    <input type="checkbox" name="Pet" value="Bird">Bird<br>
+    <input type="checkbox" name="Pet" value="Goat">Goat
+</fieldset>
+
+<fieldset>
+<legend>Radio Buttons</legend>
+<p>Radio buttons only allow the user to select one option at once. Radio buttonsin the same group have the same name, but different values!</p>
+<label for="Pet2">Which pet is your favorite?</label><br>
+	<input type="radio" name="Pet2" value="Dog">Dog<br>
+	<input type="radio" name="Pet2" value="Cat">Cat<br>
+    <input type="radio" name="Pet2" value="Bird">Bird<br>
+    <input type="radio" name="Pet2" value="Goat">Goat
+</fieldset>
+<fieldset>
+<legend>Select</legend>
+<p>Using the select and option tags you can add items to a dropdown menu.</p>
+<label for="State">Pick a State!</label><br>
+	<select name="State">
+    	<option>New Hampshire</option>
+    	<option>New Jersey</option>
+    	<option>New Mexico</option>
+    	<option>New York</option>
+    </select>
+</fieldset>
+<p>Finally, we use a button to submit our form!</p>
+<input name="Submit" type="button" value="Submit">
+<p>Here is the same button but it is disabled. (Can't be clicked)</p>
+<input name="SubmitD" type="button" value="Submit" disabled >
+</form>
+
+<hr>
+
+
+</body>
+</html>
